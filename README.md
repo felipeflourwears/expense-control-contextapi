@@ -1,4 +1,4 @@
-# Easy Tip Calculator
+# Expense Control
 
 This project is a easy expense control simulation created with Typescript, React and Vite.
 
