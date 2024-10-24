@@ -1,5 +1,7 @@
+/*Body always same */
+
 import { useReducer, createContext, ReactNode } from "react"
-import { BudgetActions, BudgetState, budgetReducer, initialState } from "../components/reducers/budget-reducer"
+import { BudgetActions, BudgetState, budgetReducer, initialState } from "../reducers/budget-reducer"
 
 
 type BudgetContextProps = {
