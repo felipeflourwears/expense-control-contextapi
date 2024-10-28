@@ -52,6 +52,8 @@ Add next lines on index.css
 ```bash
 npm i @headlessui/react  -->Window Modal
 npm i @heroicons/react --> Icons
+npm i uuid --> UUID UNICOS
+npm i --save-dev @types/uuid --> Evitar ANY
 ```
 ### React Date Picker
 ```bash
