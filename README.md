@@ -47,6 +47,31 @@ Add next lines on index.css
 @tailwind utilities;
 ```
 
+## Packages
+
+```bash
+npm i @headlessui/react  -->Window Modal
+npm i @heroicons/react --> Icons
+```
+### React Date Picker
+```bash
+https://www.npmjs.com/package/react-date-picker
+```
+
+#### npm Install
+```bash
+npm i react-date-picker
+npm i react-calendar
+```
+
+#### Import Dependencies Calendar
+```bash
+import DatePicker from 'react-date-picker';
+import 'react-calendar/dist/Calendar.css'
+import 'react-date-picker/dist/DatePicker.css'
+```
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
