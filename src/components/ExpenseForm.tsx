@@ -53,6 +53,14 @@ const ExpenseForm = () => {
         dispatch({ type: 'add-expense', payload: {
             expense
         }})
+
+        //Reset State
+        setExpense({
+            amount: 0,
+            expenseName: '',
+            category: '',
+            date: new Date()
+        })
     }
 
     return (
