@@ -73,6 +73,25 @@ import 'react-calendar/dist/Calendar.css'
 import 'react-date-picker/dist/DatePicker.css'
 ```
 
+### react-swipeable-list
+```bash
+https://www.npmjs.com/package/react-swipeable-list
+npm i react-swipeable-list
+```
+
+#### Import dependencies
+```bash
+import{
+  LeadingActions,
+  SwipeableList,
+  SwipeanleListItem,
+  SwipeAction,
+  TrailingActions
+} from 'react-swipeable-list'
+
+import "react-swipeable-list/dist/styles.css"
+```
+
 
 # React + TypeScript + Vite
 
