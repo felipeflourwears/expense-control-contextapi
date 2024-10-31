@@ -3,6 +3,7 @@ import { formatDate } from '../helpers/index';
 import AmountDisplay from './AmountDisplay';
 import { useMemo } from 'react';
 import { categories } from '../data/categories';
+import { useBudget } from '../hooks/useBudget';
 
 import{ LeadingActions, SwipeableList, SwipeableListItem, SwipeAction, TrailingActions } from 'react-swipeable-list'
 import "react-swipeable-list/dist/styles.css"
@@ -13,32 +14,32 @@ type ExpenseDetailProps ={
 
 const ExpenseDetail = ({expense} : ExpenseDetailProps) => {
 
-  const categoryInfo = useMemo(() => categories.filter(cat => cat.id === expense.category)[0],[expense])
-  const leadingActions = () => {
-    <LeadingActions>
-      <SwipeAction
-        onClick={()=>{}}
-      >
-        Actualizar
-      </SwipeAction>
-    </LeadingActions>
-  }
+  const { dispatch } = useBudget()
 
-  const trailingActions = () => {
+  const categoryInfo = useMemo(() => categories.filter(cat => cat.id === expense.category)[0],[expense])
+  
+  
+  const leadingActions = () => (
     <LeadingActions>
-      <SwipeAction
-        onClick={()=>{}}
-      >
-        Eliminar
+      <SwipeAction onClick={() => dispatch({ type: 'get-expense-by-id', paylod: {id: expense.id}})}>
+          Update
       </SwipeAction>
     </LeadingActions>
-  }
+  );
+  
+  const trailingActions = () => (
+    <TrailingActions>
+      <SwipeAction onClick={() => dispatch({type: 'delete-expense', payload:{id: expense.id}})} destructive={true}>
+        Delete
+      </SwipeAction>
+    </TrailingActions>
+  );
 
   return (
     <SwipeableList>
-      <SwipeanleListItem
-        maxSwipe={30}
-        LeadingActions={leadingActions()}
+      <SwipeableListItem
+        maxSwipe={1}
+        leadingActions={leadingActions()}
         trailingActions={trailingActions()}
       >
         <div className='bg-white shadow-lg p-10 w-full border-b border-gray-200 flex gap-5 items-center'>
@@ -54,7 +55,7 @@ const ExpenseDetail = ({expense} : ExpenseDetailProps) => {
                 amount={expense.amount}
             />
         </div>
-      </SwipeanleListItem>
+      </SwipeableListItem>
     </SwipeableList>
   )
 }
