@@ -19,12 +19,14 @@ const ExpenseForm = () => {
     })
 
     const [error, setError] = useState('')
-    const { dispatch, state } = useBudget()
+    const [previousAmount, setPreviousAmount] = useState(0)
+    const { dispatch, state, availableExpense } = useBudget()
 
     useEffect(() => {
         if(state.editingId){
           const editingExpense = state.expenses.filter(currentExpense => currentExpense.id === state.editingId)[0]
           setExpense(editingExpense)
+          setPreviousAmount(editingExpense.amount)
         }
     }, [state.editingId])
 
@@ -51,10 +53,15 @@ const ExpenseForm = () => {
         //Validation
         if(Object.values(expense).includes('')){
             console.log("Error...")
-            setError("Todos los campos son obligatorios")
+            setError("All fields are required")
             return
         }else{
             console.log("Todo OK")
+        }
+
+        if((expense.amount - previousAmount) > availableExpense){
+            setError("You exceeded your budget")
+            return
         }
 
         if(state.editingId){
@@ -69,8 +76,6 @@ const ExpenseForm = () => {
                 expense
             }})
         }
-       
-
         //Reset State
         setExpense({
             amount: 0,
@@ -78,6 +83,8 @@ const ExpenseForm = () => {
             category: '',
             date: new Date()
         })
+        //Reset Previous
+        setPreviousAmount(0)
     }
 
     return (
