@@ -57,9 +57,19 @@ const ExpenseForm = () => {
             console.log("Todo OK")
         }
 
-        dispatch({ type: 'add-expense', payload: {
-            expense
-        }})
+        if(state.editingId){
+            dispatch({type: 'update-expense', payload:{
+                expense:{
+                    id: state.editingId,
+                    ...expense
+                }
+            }})
+        }else{
+            dispatch({ type: 'add-expense', payload: {
+                expense
+            }})
+        }
+       
 
         //Reset State
         setExpense({
@@ -73,7 +83,7 @@ const ExpenseForm = () => {
     return (
         <form onSubmit={handleSubmit} className="space-y-5">
             <legend className="uppercase text-center text-2xl font-black border-b-4 border-purple-500 py-2">
-                New Expense
+                {state.editingId ? 'Edit Expense' : 'New Expense'}
             </legend>
 
             {error && (
@@ -119,7 +129,7 @@ const ExpenseForm = () => {
                 />
             </div>
 
-            <input type="submit" className="bg-purple-600 cursor-pointer w-full p-2 text-white uppercase font-bold rounded-lg" value={'Register Expense'}/>
+            <input type="submit" className="bg-purple-600 cursor-pointer w-full p-2 text-white uppercase font-bold rounded-lg" value={state.editingId ? 'Kept Changes' : 'New Expense'}/>
         </form>
     )
 }
