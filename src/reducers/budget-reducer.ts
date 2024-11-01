@@ -1,7 +1,6 @@
 import { DraftExpense, Expense } from "../types"
 import { v4 as uuidv4 } from 'uuid'
 import { Category } from '../types/index';
-import { act } from "react";
 
 export type BudgetActions = 
     { type: 'add-budget', payload: {budget: number} } |
