@@ -85,12 +85,23 @@ npm i react-swipeable-list
 import{
   LeadingActions,
   SwipeableList,
-  SwipeanleListItem,
+  SwipeableListItem,
   SwipeAction,
   TrailingActions
 } from 'react-swipeable-list'
 
 import "react-swipeable-list/dist/styles.css"
+```
+
+### react-circular-progressbar
+```bash
+npm i react-circular-progressbar
+```
+
+#### Import dependencies
+```bash
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
+import "react-circular-progressbar/dist/styles.css"
 ```
 
 

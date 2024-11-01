@@ -1,7 +1,6 @@
 import { useMemo } from "react"
 import { useBudget } from "../hooks/useBudget"
 import ExpenseDetail from "./ExpenseDetail"
-import { Expense } from '../types/index';
 
 
 const ExpenseList = () => {
