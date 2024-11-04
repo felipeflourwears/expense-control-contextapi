@@ -18,6 +18,19 @@ function App() {
     localStorage.setItem('budget', state.budget.toString())
   },[state])
 
+  useEffect(() => {
+    console.log("Lista de gastos actualizada:", state.expenses);
+  }, [state.expenses]);
+
+  useEffect(() => {
+    if(state.currentCategory === ''){
+      console.log("ALL Categories")
+    }else{
+      console.log("Categoría actual:", state.currentCategory);
+    }
+  }, [state.currentCategory]);
+
+
   return (
     <>
       <header className="bg-purple-800 py-8 max-h-72">

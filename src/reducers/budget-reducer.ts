@@ -78,15 +78,20 @@ export const budgetReducer = (
         return {
             ...state,
             expenses: [...state.expenses, expense],
-            modal: false
+            modal: false,
+            currentCategory: ''
         }
     }
 
     if(action.type === 'delete-expense'){
+        console.log("DELETE------------------------------------")
+        console.log(state.expenses)
+        console.log("--------------------------------------------")
         
         return {
             ...state,
-            expenses: state.expenses.filter(expense=> expense.id !== action.payload.id)
+            expenses: state.expenses.filter(expense=> expense.id !== action.payload.id),
+            currentCategory: ''
         }
     }
     if(action.type === 'get-expense-by-id'){
@@ -112,10 +117,14 @@ export const budgetReducer = (
         }
     }
     if(action.type === 'add-filter-category'){
+        console.log("FILTER--------------------------------------")
+        console.log(state.expenses)
+        console.log("--------------------------------------------")
         return{
             ...state,
             currentCategory: action.payload.id
         }
+        
     }
 
     return state

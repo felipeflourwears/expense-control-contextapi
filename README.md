@@ -15,6 +15,8 @@ npm create vite@latest
 √ Select a variant: » Typescript + SWC
 ```
 
+<p><img src = "" /></p>
+
 ## Package Tailwind CSS
 
 [![Tailwind Docs](https://img.shields.io/badge/Docs-TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/docs/installation)

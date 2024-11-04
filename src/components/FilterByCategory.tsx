@@ -9,6 +9,8 @@ const FilterByCategory = () => {
         dispatch({ type: 'add-filter-category', payload: {id: e.target.value} })
     }
 
+    //console.log("Categorías disponibles:", categories);
+
     return (
         <div className="bg-white shadow-lg rounded-lg p-10">
             <form action="" className="">
