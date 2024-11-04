@@ -15,7 +15,25 @@ npm create vite@latest
 √ Select a variant: » Typescript + SWC
 ```
 
-<p><img src = "" /></p>
+## Screenshots
+
+### Screen Define Budget
+<img src="public/define.png" alt="main-budget">
+
+
+### Interact with your budget according to different categories
+<img src="public/ExpenseControl.png" alt="main-interact">
+
+### Modal Windows
+<img src="public/modal.png" alt="main-modal">
+
+# Site Deploy by Netlify
+
+```bash
+https://splendid-melba-3ff841.netlify.app/
+```
+
+[![Visit Site](https://img.shields.io/badge/Visit-Website-blue?style=for-the-badge)](https://vermillion-pavlova-c5b414.netlify.app/)
 
 ## Package Tailwind CSS
 
