@@ -33,7 +33,7 @@ npm create vite@latest
 https://splendid-melba-3ff841.netlify.app/
 ```
 
-[![Visit Site](https://img.shields.io/badge/Visit-Website-blue?style=for-the-badge)](https://vermillion-pavlova-c5b414.netlify.app/)
+[![Visit Site](https://img.shields.io/badge/Visit-Website-blue?style=for-the-badge)](https://splendid-melba-3ff841.netlify.app/)
 
 ## Package Tailwind CSS
 
