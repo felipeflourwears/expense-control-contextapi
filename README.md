@@ -30,10 +30,10 @@ npm create vite@latest
 # Site Deploy by Netlify
 
 ```bash
-https://splendid-melba-3ff841.netlify.app/
+https://effervescent-baklava-a68dd2.netlify.app/
 ```
 
-[![Visit Site](https://img.shields.io/badge/Visit-Website-blue?style=for-the-badge)](https://splendid-melba-3ff841.netlify.app/)
+[![Visit Site](https://img.shields.io/badge/Visit-Website-blue?style=for-the-badge)](https://effervescent-baklava-a68dd2.netlify.app/)
 
 ## Package Tailwind CSS
 
